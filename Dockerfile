@@ -29,5 +29,8 @@ RUN \
 ## Copy root files to file system
 COPY assets/rootfs /
 
+# Make entrypoint script accessible and executable
+RUN chmod 0755 /entrypoint.sh
+
 ## Entrypoint
 ENTRYPOINT ["/entrypoint.sh"]
